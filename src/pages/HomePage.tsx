@@ -1,13 +1,14 @@
 import {
-  IonApp,
   IonContent,
   IonHeader,
   IonTitle,
   IonToolbar,
   IonPage,
+  IonList,
+  IonItem,
 } from '@ionic/react';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { entries } from '../data';
 
 const HomePage: React.FC = () => {
   return (
@@ -18,7 +19,15 @@ const HomePage: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        Go to <Link to="/settings" >Settings</Link>
+       <IonList>
+         {entries.map((entry) => 
+           <IonItem button key={entry.id} 
+           routerLink={`/my/entries/${entry.id}`}>
+             {entry.title}
+             </IonItem>
+         )}
+         
+         </IonList>
       </IonContent>
     </IonPage>
   );
