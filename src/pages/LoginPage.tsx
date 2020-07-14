@@ -18,7 +18,8 @@ import { useAuth } from '../auth';
 import { auth } from '../firebase';
 
 
-const LoginPage: React.FC = () => {
+
+const LoginPage = ({ onLogin }) => {
   const {loggedIn} = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
