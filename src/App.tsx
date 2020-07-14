@@ -28,7 +28,7 @@ const App: React.FC = () => {
                 <Switch> 
                   <Route path="/login" exact>
                     <LoginPage
-                    onLogin={() => setLoggedIn(true)} />
+                     />
                     
                   </Route>
                   <Route path="/my">

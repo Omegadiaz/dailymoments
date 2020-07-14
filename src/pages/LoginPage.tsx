@@ -17,12 +17,8 @@ import { Redirect } from 'react-router';
 import { useAuth } from '../auth';
 import { auth } from '../firebase';
 
-interface Props {
-  loggedIn: boolean;
-  onLogin: () => any;
-}
 
-const LoginPage: React.FC<Props> = ({ onLogin }) => {
+const LoginPage: React.FC = () => {
   const {loggedIn} = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
