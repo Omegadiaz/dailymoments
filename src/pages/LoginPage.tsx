@@ -19,7 +19,7 @@ import { auth } from '../firebase';
 
 interface Props {
   loggedIn: boolean;
-  onLogin: () => void;
+  onLogin: () => any;
 }
 
 const LoginPage: React.FC<Props> = ({ onLogin }) => {
