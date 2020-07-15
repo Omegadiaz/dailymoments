@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import  { IonReactRouter} from '@ionic/react-router';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 import AppTabs from './AppTabs';
 import { AuthContext } from './auth';
 import NotFoundPage from './pages/NotFoundPage';
@@ -28,6 +29,11 @@ const App: React.FC = () => {
                 <Switch> 
                   <Route path="/login" exact>
                     <LoginPage
+                    onLogin={() => setAuthState({loading: false, loggedIn: true})} />
+                    
+                  </Route>
+                  <Route path="/register" exact>
+                    <RegisterPage
                     onLogin={() => setAuthState({loading: false, loggedIn: true})} />
                     
                   </Route>
