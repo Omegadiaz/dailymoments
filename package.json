@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "ionic serve",
-    "build": "ionic build"
+    "build": "ionic build && echo '/* /index.html 200' | cat >build/_redirects"
   },
   "dependencies": {
     "@capacitor/core": "2.1.0",
